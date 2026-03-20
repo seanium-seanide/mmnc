@@ -1,0 +1,16 @@
+*.swp
+_build/
+.cache/
+session.vim
+compile_commands.json
+plot
+__pycache__
+notes.md
+playground/
+_buildUI.sh
+MANIFEST.in
+venv
+requirements.txt
+toml/
+src/
+README.md
