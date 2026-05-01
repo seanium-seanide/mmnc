@@ -1,8 +1,14 @@
-#include <fmt/core.h>
+#include <QApplication>
+#include <QWidget>
+#include <QObject>
+#include "MainWindow.hpp"
 
-int main()
+
+int main(int argc, char **argv)
 {
-  fmt::print("Hello, world!\n");
+  QApplication app(argc, argv);
+  MainWindow window;
 
-  return 0;
+  window.show();
+  return app.exec();
 }
