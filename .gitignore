@@ -7,3 +7,5 @@ notes.md
 src/
 README.md
 data/
+.venv
+ref_impl

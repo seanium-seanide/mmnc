@@ -1,7 +1,10 @@
 #pragma once
 
 #include <QMainWindow>
+#include <unordered_map>
+
 #include "Material.hpp"
+#include "Interferometer.hpp"
 
 
 namespace Ui
@@ -9,8 +12,11 @@ namespace Ui
   class MainWindow;
 }
 
+
 class MainWindow: public QMainWindow
 {
+  Q_OBJECT
+
 public:
   explicit MainWindow(QWidget* parent=nullptr);
   ~MainWindow();
@@ -18,6 +24,7 @@ public:
 public slots:
   void onAddMaterial();
   void onInterfParams();
+  void onOutputParams();
   void onViewMaterials();
   void onAddLayer();
   void onRemoveLayer();
@@ -28,9 +35,10 @@ public slots:
 private:
   Ui::MainWindow* ui;
 
+  std::unordered_map<std::string, Material> m_materials{};
+  Interferometer m_interferometer;
+
   // TODO: Overload operators for Material class, and remove these member functins.
-  void addMaterials(Material material1, Material materialb);
-  void subMaterials(Material material1, Material materialb);
+  //void addMaterials(Material material1, Material materialb);
+  //void subMaterials(Material material1, Material materialb);
 };
-
-
