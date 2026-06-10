@@ -52,8 +52,6 @@ void MainWindow::onAddMaterial()
     {
       result = true;
     }
-
-    fmt::println("So, I herd u like adding materials :> {}", result);
   }
 }
 

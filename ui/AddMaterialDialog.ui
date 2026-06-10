@@ -234,5 +234,38 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>AddMaterialDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>419</x>
+     <y>619</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>608</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>AddMaterialDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>390</x>
+     <y>612</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>621</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -1,7 +1,9 @@
 #pragma once
 
+#include <string>
 #include <QDialog>
 #include <QDoubleValidator>
+#include "Material.hpp"
 
 
 namespace Ui
@@ -20,9 +22,12 @@ public:
 
 public slots:
   void onImportMaterialButtonClicked();
+  virtual void accept() override;
 
 private:
   Ui::AddMaterialDialog* ui;
 
   QDoubleValidator m_doubleValidator;
+
+  Material m_material;
 };
