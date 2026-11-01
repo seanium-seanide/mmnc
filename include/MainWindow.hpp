@@ -37,8 +37,4 @@ private:
 
   std::unordered_map<std::string, Material> m_materials{};
   Interferometer m_interferometer;
-
-  // TODO: Overload operators for Material class, and remove these member functins.
-  //void addMaterials(Material material1, Material materialb);
-  //void subMaterials(Material material1, Material materialb);
 };
