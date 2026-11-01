@@ -18,7 +18,7 @@ qt_standard_project_setup()
 add_subdirectory(source)
 
 option(BUILD_TESTS "Build unit tests" ON)
-if (BUILD_TESTS)
+if(BUILD_TESTS)
   enable_testing()
   add_subdirectory(test)
 endif()
