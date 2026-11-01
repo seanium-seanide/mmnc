@@ -12,7 +12,6 @@ MainWindow::MainWindow(QWidget* parent)
 {
   m_impl->setupUi(this);
 
-
   connect(m_impl->actionAddMaterial, &QAction::triggered, this, &MainWindow::onAddMaterial);
   connect(m_impl->actionInterfParams, &QAction::triggered, this, &MainWindow::onInterfParams);
   connect(m_impl->actionOutputParams, &QAction::triggered, this, &MainWindow::onOutputParams);
@@ -24,7 +23,6 @@ MainWindow::MainWindow(QWidget* parent)
   connect(m_impl->exportStackButton, &QPushButton::clicked, this, &MainWindow::onExportStack);
   connect(m_impl->computeStackButton, &QPushButton::clicked, this, &MainWindow::onComputeStack);
 
-  
   m_materials["bulkSilica"] = Material("bulkSilica", 1e-9, 1e-6, 1e-6, 1, 1e6, 1.45, 73.2e9, 0.17, 1e-9);
 
   m_interferometer.beamWidth = 0.062;
@@ -32,12 +30,10 @@ MainWindow::MainWindow(QWidget* parent)
   m_interferometer.temperature = 290.0;
 }
 
-
 MainWindow::~MainWindow()
 {
   delete m_impl;
 }
-
 
 void MainWindow::onAddMaterial()
 {
@@ -55,48 +51,40 @@ void MainWindow::onAddMaterial()
   }
 }
 
-
 void MainWindow::onInterfParams()
 {
   std::println("So, I herd u like interferometer parameters :>");
 }
-
 
 void MainWindow::onOutputParams()
 {
   std::println("So, I herd u like outputting parameters :>");
 }
 
-
 void MainWindow::onViewMaterials()
 {
   std::println("So, I herd u like viewing materials :>");
 }
-
 
 void MainWindow::onAddLayer()
 {
   std::println("So, I herd u like adding layers :>");
 }
 
-
 void MainWindow::onRemoveLayer()
 {
   std::println("So, I herd u like removing layers :>");
 }
-
 
 void MainWindow::onImportStack()
 {
   std::println("So, I herd u like importing stacks :>");
 }
 
-
 void MainWindow::onExportStack()
 {
   std::println("So, I herd u like exporting stacks :>");
 }
-
 
 void MainWindow::onComputeStack()
 {
