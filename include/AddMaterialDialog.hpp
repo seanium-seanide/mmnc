@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 #include <QDialog>
 #include <QDoubleValidator>
 #include "Material.hpp"
@@ -25,7 +24,7 @@ public slots:
   virtual void accept() override;
 
 private:
-  Ui::AddMaterialDialog* ui;
+  Ui::AddMaterialDialog* m_impl;
 
   QDoubleValidator m_doubleValidator;
 

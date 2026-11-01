@@ -9,7 +9,7 @@ struct Material
   double absorptionCoefficient;       // $\a$:      Absorption coefficient
   double thermalExpansionCoefficient; // $\alpha:   Thermal expansion coefficient
   double thermoOpticCoefficent;       // $\beta$:   Temerature derivative of refractive index.
-  double thermalconductivity;         // $\kappa$:  Proportionality between heat flux and temperature gradient.
+  double thermalConductivity;         // $\kappa$:  Proportionality between heat flux and temperature gradient.
   double specificHeatCapacity;        // $C$:       Heat capacity per volume.
   double refractiveIndex;             // $n$:       Real part of the refractive index.
   double youngsModulus;               // $Y$:       Proportionality between stress and strain.

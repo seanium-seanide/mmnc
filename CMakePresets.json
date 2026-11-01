@@ -1,0 +1,28 @@
+{
+  "version": 8,
+  "$schema": "https://cmake.org/cmake/help/latest/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
+  "configurePresets": [
+    {
+      "name": "debug-config-clang",
+      "binaryDir": "build/debug/clang",
+      "displayName": "Debug configuration (Clang)",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/usr/bin/clang++-24",
+        "CMAKE_CXX_STANDARD": "26",
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+        "CMAKE_CXX_EXTENSIONS": "OFF",
+        "CMAKE_CXX_COMPILER_LAUNCHER": "ccache",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_PREFIX_PATH": "~/Qt/6.12.0/gcc_64"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-build-clang",
+      "displayName": "Debug build (Clang)",
+      "configurePreset": "debug-config-clang"
+    }
+  ]
+}

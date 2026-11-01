@@ -33,7 +33,7 @@ public slots:
   void onComputeStack();
 
 private:
-  Ui::MainWindow* ui;
+  Ui::MainWindow* m_impl;
 
   std::unordered_map<std::string, Material> m_materials{};
   Interferometer m_interferometer;
